@@ -1,0 +1,26 @@
+
+circle {
+    fill : none;
+    stroke-width: 12px;
+    stroke-dasharray: 880;
+}
+
+circle:nth-child(2) {
+    stroke-dashoffset: 300;
+}
+circle:nth-child(3) {
+    stroke-dashoffset: 470;
+}
+circle:nth-child(4) {
+    stroke-dashoffset: 570;
+}
+circle:nth-child(5) {
+    stroke-dashoffset: 670;
+}
+circle:nth-child(6) {
+    stroke-dashoffset: 700;
+}
+circle:nth-child(7) {
+    stroke-dashoffset: 790;
+}
+

@@ -1,0 +1,17 @@
+.tech-animation {
+    animation: move-rtl 6000ms linear infinite;
+}
+
+.tech-container{
+    -webkit-mask: linear-gradient(90deg , transparent , white 20% , white 80% , transparent);
+    mask : linear-gradient(90deg , transparent , white 20% , white 80% , transparent);
+}
+
+@keyframes move-rtl {
+    0% {
+        transform: translateX(0);
+    } 
+    100% {
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,25 @@
+.scroll-reveal span {
+    color: hsla(0, 0%, 49%, 0.2);
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-image: linear-gradient(90deg , rgb(39, 39, 39) , rgb(39, 39, 39));
+    animation : scroll-reveal linear forwards;
+    animation-timeline: view();
+}
+
+.scroll-reveal h2 span {
+    animation-range-start: cover 20vh;
+    animation-range-end: cover 30vh;
+}
+
+.scroll-reveal p span {
+    animation-range-start: cover 22.5vh;
+    animation-range-end: cover 47vh;
+}
+
+@keyframes scroll-reveal {
+    to {
+        background-size: 100% 100%;
+    }
+}

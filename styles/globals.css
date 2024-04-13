@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .gradiant {
+        @apply bg-gradient-to-b from-neutral-800 to-neutral-600 text-white
+    }
+
+    .title {
+        @apply mx-auto text-5xl font-bold w-fit text-neutral-700 max-md:text-4xl max-sm:text-2xl
+    }
+
+    input , textarea {
+        @apply outline-neutral-700
+    }
+
+    .filter-li {
+        @apply p-3 cursor-pointer transition-all hover:bg-zinc-100
+    }
+}
+
+#nprogress .spinner-icon {
+    display: none !important;
+}
+
+html{
+    background-image: url('/patterns/dot-grid.webp');
+    box-shadow: inset 0     0 0 1000px rgba(228, 228, 228, 0.274);
+    scroll-behavior: smooth;
+}
+
+input , textarea , select {
+    @apply p-2 rounded-lg border outline-neutral-700
+}
+
+.text {
+    animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
