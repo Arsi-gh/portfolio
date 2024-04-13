@@ -1,5 +1,5 @@
 @media only screen and (min-width: 768px) {
-    .wrapper{
+    .comment-wrapper{
         -webkit-mask: linear-gradient(180deg , transparent , white 0% , white 75% , transparent);
         mask : linear-gradient(180deg , transparent , white 0% , white 75% , transparent);
     }

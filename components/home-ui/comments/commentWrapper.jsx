@@ -17,7 +17,7 @@ export default function CommentWrapper() {
   return (
     <>
     <h3 className='title'>Comments</h3>
-    <section className='my-12 flex flex-col max-w-screen-xl xl:px-12 xl:max-h-[50rem] flex-wrap gap-8 items-center mx-auto wrapper md:max-h-[65rem] max-xl:max-w-[50rem] max- max-md:px-4'>
+    <section className='comment-wrapper my-12 flex flex-col max-w-screen-xl xl:px-12 xl:max-h-[50rem] flex-wrap gap-8 items-center mx-auto md:max-h-[65rem] max-xl:max-w-[50rem] max- max-md:px-4'>
         {comments.map(comment => <Comment key={comment.id} {...comment}/>)}
     </section>
     </>
