@@ -35,7 +35,6 @@ const Links = () => {
   const router = useRouter()
 
   const handleClick = async (ref) => {
-    console.log(servicesRef.current)
     if (router.asPath != '/') {
       await router.push('/')
     } 
