@@ -5,7 +5,7 @@ import ProjectWrapper from "../home-ui/projects/projectWrapper";
 export default function ProjectFilter() {
   return (
     <div className="gap-2 rounded-lg border overflow-hidden h-fit w-64 bg-white bg-opacity-70 sticky top-4">
-        <div className="p-3 flex flex-wrap gap-2 items-center">
+        {/* <div className="p-3 flex flex-wrap gap-2 items-center">
           <p className="text-lg font-semibold w-full mb-2">Filters</p>
           <span className="p-1 px-4 rounded-full bg-zinc-100 border">Gsap</span>
           <span className="p-1 px-4 rounded-full bg-zinc-100 border">Tailwind</span>
@@ -14,10 +14,10 @@ export default function ProjectFilter() {
           <span className="p-1 px-4 rounded-full bg-zinc-100 border">React</span>
           <span className="p-1 px-4 rounded-full bg-zinc-100 border">Bootstrap</span>
           <span className="p-1 px-4 rounded-full bg-zinc-100 border">Js</span>
-        </div>
+        </div> */}
         <ProjectSort/>
         <ProjectTypes/>
-        <ProjectTags/>
+        <ProjectTechs/>
     </div>
   );
 }
@@ -49,9 +49,9 @@ const ProjectTypes = () => {
   );
 };
 
-const ProjectTags = () => {
+const ProjectTechs = () => {
   return (
-    <FilterWrapper name="Tags">
+    <FilterWrapper name="Technologies">
       <li className="filter-li">React</li>
       <li className="filter-li">Next</li>
       <li className="filter-li">Solid</li>

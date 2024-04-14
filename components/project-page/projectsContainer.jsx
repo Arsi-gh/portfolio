@@ -1,12 +1,12 @@
 import React from 'react'
-import ProjectItem from './projectItem'
+import { projects } from '@/data/projects'
+import ProjectCard from './projectCard'
 
 export default function ProjectsContainer() {
+
   return (
-    <section className='flex-1 overflow-auto place-content-start h-[50rem] grid grid-cols-2 gap-3'>
-      <ProjectItem/>
-      <ProjectItem/>
-      <ProjectItem/>
+    <section className='flex-1 place-content-start grid grid-cols-2 gap-3'>
+      {projects.map(project => <ProjectCard key={project.id} {...project}/>)}
     </section>
   )
 }

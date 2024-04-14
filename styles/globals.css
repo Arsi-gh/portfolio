@@ -18,6 +18,10 @@
     .filter-li {
         @apply p-3 cursor-pointer transition-all hover:bg-zinc-100
     }
+
+    .tag {
+        @apply p-2 rounded-full bg-zinc-200 flex items-center gap-x-3 max-sm:text-sm
+    }
 }
 
 #nprogress .spinner-icon {

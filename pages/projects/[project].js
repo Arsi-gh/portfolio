@@ -1,51 +1,90 @@
-import TechElem from '@/components/global/TechElement'
 import ImageGallary from '@/components/project-page/imageGallary'
-import { useParams } from 'next/navigation'
 import React from 'react'
-import { CgFormatLeft } from 'react-icons/cg'
-import { SiMui, SiReact, SiTailwindcss } from 'react-icons/si'
-import { TbBrandNextjs, TbBrandTypescript } from 'react-icons/tb'
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { projects } from '@/data/projects'
+import Link from 'next/link';
+import { Icons } from '@/components/project-page/projectIcons';
 
-export default function ProjectPage() {
+export default function ProjectPage(props) {
 
-  const params = useParams()
+  const project = props.project[0]
 
   return (
-    <main className='mt-6 2xl:max-w-screen-2xl max-w-screen-xl mx-auto max-xl:px-4'>
-        <ImageGallary/>
-        <section className='mt-4 text-neutral-700'>
+    <main className='mt-6 2xl:max-w-screen-2xl max-w-screen-xl mx-auto max-xl:px-4 flex gap-5 max-lg:flex-col-reverse'>
+        <section className='flex-1 text-neutral-700'>
             <div className='p-5 rounded-xl bg-white shadow-sm space-y-4'>
-                <ProjectMainInfo/>
+                <ProjectMainInfo {...project}/>
                 <hr />
-                <TechStack/>
-                <hr />
+                <TechStack techs={project.techs}/>
+                <Client {...project}/>
             </div>
         </section>
+        <div>
+            <ImageGallary images={project.images}/>
+            <a target='_blank' href={project.link} className='p-3 bg-gradient-to-bl from-neutral-800 to-neutral-600 text-white font-semibold w-full mt-3 rounded-xl shadow-xl border flex justify-center items-center gap-x-2'>Click to see online<MdOutlineRemoveRedEye className='text-2xl'/></a>
+        </div>
     </main>
   )
 }
 
-const ProjectMainInfo = () => {
+const ProjectMainInfo = ({title , desc}) => {
     return (
         <>
-            <h4 className='text-3xl font-semibold'>Description :</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consectetur fugit aspernatur quo accusamus labore mollitia voluptatum asperiores! Odit modi quam alias dolor fugit sint ipsum dolores ea nam consectetur? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui libero, similique nemo, magni ipsum laudantium minima aperiam beatae porro a labore voluptatibus ipsam quas perferendis culpa magnam cupiditate dolor illo! </p>
+            <h2 className='text-3xl font-bold max-sm:text-2xl'>{title}</h2>
+            <h4 className='text-2xl font-semibold max-sm:text-xl'>Description :</h4>
+            <p className='max-sm:text-sm'>{desc}</p>
         </>
     )
 }
 
-const TechStack = () => {
+const TechStack = ({techs}) => {
     return (
         <>
         <h4 className='text-xl font-semibold'>Technologies : </h4>
         <div className='flex flex-wrap mt-4 gap-x-2'>
-            <TechElem text="Tailwind css"><SiTailwindcss className='text-2xl'/></TechElem>
-            <TechElem text="Next js"><TbBrandNextjs className='text-2xl'/></TechElem>
-            <TechElem text="React js"><SiReact className='text-2xl'/></TechElem>
-            <TechElem text="Typescript"><TbBrandTypescript className='text-2xl'/></TechElem>
-            <TechElem text="Mui"><SiMui className='text-2xl'/></TechElem>
-            <TechElem text="Formik"><CgFormatLeft className='text-2xl'/></TechElem>
+            {techs.map(tech => Icons[tech])}
         </div>
         </>
     )
 }
+
+const Client = ({client , clientImg , clientDesc}) => {
+    if (client) return (
+        <>
+        <hr />
+        <div className='flex gap-3 items-center'>
+            <img className='size-20 rounded-full object-cover' src={clientImg} alt="client-logo" />
+            <span className='space-y-2'>
+                <p className='font-semibold'>{client}</p>
+                <p>{clientDesc}</p>
+            </span>
+        </div>
+        </>
+    )
+}
+
+export async function getStaticProps (context) {
+
+    let data = projects.filter(project => project.id == context.params.Project)
+
+    return {
+      props : {
+        project : data
+      },
+    }
+}
+
+
+export async function getStaticPaths () {
+    return {
+      paths : [
+        {params  : {Project : "1"}},
+        {params  : {Project : "2"}},
+        {params  : {Project : "3"}},
+        {params  : {Project : "4"}},
+        {params  : {Project : "5"}},
+      ],
+      fallback : true,
+    }
+}
+  
