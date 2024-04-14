@@ -6,28 +6,27 @@ import { projects } from '@/data/projects';
 
 export default function  ProjectPage({project}){
 
-  if (project){
+    if (project) {
 
-      
       const {title , desc , images , client , clientDesc , clientImg , techs , link } = project  
       
       return (
-          <main className='mt-6 2xl:max-w-screen-2xl max-w-screen-xl mx-auto max-xl:px-4 flex gap-5 max-lg:flex-col-reverse'>
-        <section className='flex-1 text-neutral-700'>
-            <div className='p-5 rounded-xl bg-white shadow-sm space-y-4'>
-                <ProjectMainInfo title={title} desc={desc}/>
-                <hr />
-                <TechStack techs={techs}/>
-                <Client client={client} clientDesc={clientDesc} clientImg={clientImg}/>
-            </div>
-        </section>
-        <div>
-            <ImageGallary images={images}/>
-            <a target='_blank' href={link} className='p-3 bg-gradient-to-bl from-neutral-800 to-neutral-600 text-white font-semibold w-full mt-3 rounded-xl shadow-xl border flex justify-center items-center gap-x-2'>Click to see online<MdOutlineRemoveRedEye className='text-2xl'/></a>
-        </div>
-    </main>
-  )
-}  
+            <main className='mt-6 2xl:max-w-screen-2xl max-w-screen-xl mx-auto max-xl:px-4 flex gap-5 max-lg:flex-col-reverse'>
+                <section className='flex-1 text-neutral-700'>
+                    <div className='p-5 rounded-xl bg-white shadow-sm space-y-4'>
+                        <ProjectMainInfo title={title} desc={desc}/>
+                        <hr />
+                        <TechStack techs={techs}/>
+                        <Client client={client} clientDesc={clientDesc} clientImg={clientImg}/>
+                    </div>
+                </section>
+                <div>
+                    <ImageGallary images={images}/>
+                    <a target='_blank' href={link} className='p-3 bg-gradient-to-bl from-neutral-800 to-neutral-600 text-white font-semibold w-full mt-3 rounded-xl shadow-xl border flex justify-center items-center gap-x-2'>Click to see online<MdOutlineRemoveRedEye className='text-2xl'/></a>
+                </div>
+            </main>
+        )
+    }  
 }
 
 const ProjectMainInfo = ({title , desc}) => {
