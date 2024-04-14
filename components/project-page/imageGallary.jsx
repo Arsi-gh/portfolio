@@ -4,7 +4,7 @@ export default function ImageGallary({images}) {
 
   const [index , setIndex] = useState(0)
 
-  return (
+  if (images) return (
     <section className='lg:w-[30rem] flex flex-col gap-3'>
         <img className='w-full h-[20rem] rounded-2xl shadow-xl bg-white object-contain' src={images[index]} alt="" />
         <div className='w-full  sm:h-[20rem] grid grid-rows-3 grid-cols-7 gap-3 max-sm:flex max-sm:overflow-auto'>
