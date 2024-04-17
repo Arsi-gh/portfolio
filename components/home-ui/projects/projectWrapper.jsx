@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import { FaChevronRight , FaChevronLeft} from 'react-icons/fa';
 import { useRefs } from '@/context/refsProvider';
 import Title from '@/components/global/title';
+import { projectsData } from '@/data/projects';
 
 export default function ProjectWrapper() {
 
@@ -24,7 +25,7 @@ export default function ProjectWrapper() {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        initialSlide={3}
+        initialSlide={2}
         breakpoints= {{
           100 : {
             slidesPerView : 3
@@ -45,13 +46,8 @@ export default function ProjectWrapper() {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
-        <SwiperSlide> <Project/> </SwiperSlide>
-        <SwiperSlide> <Project/> </SwiperSlide>
-        <SwiperSlide> <Project/> </SwiperSlide>
-        <SwiperSlide> <Project/> </SwiperSlide>
-        <SwiperSlide> <Project/> </SwiperSlide>
-        <SwiperSlide> <Project/> </SwiperSlide>
-        <SwiperSlide> <Project/> </SwiperSlide>
+        {projectsData.map(project => <SwiperSlide key={project.id}><Project {...project}/></SwiperSlide>)}
+
       </Swiper>
     </div>
     <div className='flex w-fit mx-auto mb-24 gap-1'>

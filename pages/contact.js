@@ -6,8 +6,8 @@ import { MdAlternateEmail } from "react-icons/md";
 
 export default function Contact() {
   return (
-    <section className='2xl:max-w-screen-2xl max-w-screen-xl mx-auto flex flex-col items-center mt-14'>
-        <div className='w-[55rem] bg-white rounded-xl overflow-hidden shadow-2xl flex'>
+    <section className='2xl:max-w-screen-2xl max-w-screen-xl mx-auto flex flex-col items-center md:mt-14 mt-6 max-lg:px-4'>
+        <div className='w-[55rem] bg-white rounded-xl overflow-hidden shadow-2xl flex max-lg:w-full max-sm:flex-col'>
             <ContactForm/>
             <div className='flex-1 bg-gradient-to-br from-neutral-800 to-neutral-600 text-white p-3 flex flex-col justify-between'>
                 <ContactOptions/>
@@ -19,7 +19,7 @@ export default function Contact() {
 
 const ContactForm = () => {
     return (
-        <form className='w-[35rem] p-4 flex flex-col gap-y-2 text-neutral-800'>
+        <form className='w-2/3 p-4 flex flex-col gap-y-2 text-neutral-800 max-sm:w-full'>
             <label htmlFor="">Name</label>
             <input type="text"/>
             <label htmlFor="">Email</label>
@@ -42,7 +42,7 @@ const ContactOptions = () => {
         <>
         <p className='text-lg'>You'll recieve an email as soon as possible</p>
         <div>
-            <p className='text-xl'>Socials : </p>
+            <p className='text-xl mt-4'>Socials : </p>
 
             <div className='flex items-center justify-between mt-4 mb-10 pr-2 justify-self-end'>
                 <a className='p-1 rounded-lg border-2 border-transparent hover:border-white flex items-center gap-x-2 transition-all duration-150 group' target='_blank' href="linkedin.com/in/arsi-gh/"><FaLinkedin  className='text-3xl'/><p className='text-[0px] group-hover:text-base transition-all duration-300 delay-75'>Linkedin</p></a>

@@ -16,7 +16,7 @@
     }
 
     .filter-li {
-        @apply p-3 cursor-pointer transition-all hover:bg-zinc-100
+        @apply p-2 pr-4 cursor-pointer transition-all flex items-center justify-between hover:bg-zinc-100  hover:text-neutral-800
     }
 
     .tag {
@@ -50,3 +50,16 @@ input , textarea , select {
         transform: rotate(0deg);
     }
 }
+
+/* scroll bar styles */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(168, 168, 168);
+    border-radius: 10px;
+}
+  

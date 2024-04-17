@@ -3,6 +3,7 @@ import { CgSearch } from 'react-icons/cg';
 import { IoIosCalendar } from "react-icons/io";
 import { LuCode2 } from "react-icons/lu";
 import { BsStars } from "react-icons/bs";
+import Image from 'next/image';
 
 
 
@@ -31,7 +32,7 @@ export default function WorkSteps() {
 const Step = ({img , name , text , children}) => {
   return (
     <figure className='lg:w-1/4 lg:hover:w-1/2 rounded-2xl 2xl:h-72 h-60 max-md:h-72 relative overflow-hidden transition-all duration-500  group max-sm:h-56'>
-      <img className='w-full h-full absolute top-0 left-0 object-cover' src={img} alt={name} />
+      <Image width={500} height={500} src={img} alt={name} className='w-full h-full absolute top-0 left-0 object-cover'  />
       <figcaption className='w-full h-full absolute left-0 top-0 p-8 z-10 bg-neutral-900 bg-opacity-80 text-white transition-all group-hover:bg-opacity-90 group-hover:backdrop-blur-sm max-sm:p-4'>
         <span className='flex items-center gap-x-3'>
           {children}

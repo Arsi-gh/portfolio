@@ -1,14 +1,15 @@
 import ImageGallary from '@/components/project-page/imageGallary'
 import React from 'react'
 import { MdOutlineRemoveRedEye } from "react-icons/md";
-import { Icons } from '@/components/project-page/projectIcons';
-import { projects } from '@/data/projects';
+import { icons, typeIcons } from '@/components/project-page/projectIcons';
+import { projectsData } from '@/data/projects';
+import Image from 'next/image';
 
 export default function  ProjectPage({project}){
 
     if (project) {
 
-      const {title , desc , images , client , clientDesc , clientImg , techs , link } = project  
+      const {title , desc , types , images , client , clientDesc , clientImg , techs , link } = project  
       
       return (
             <main className='mt-6 2xl:max-w-screen-2xl max-w-screen-xl mx-auto max-xl:px-4 flex gap-5 max-lg:flex-col-reverse'>
@@ -29,7 +30,7 @@ export default function  ProjectPage({project}){
     }  
 }
 
-const ProjectMainInfo = ({title , desc}) => {
+const ProjectMainInfo = ({title , desc }) => {
     return (
         <>
             <h2 className='text-3xl font-bold max-sm:text-2xl'>{title}</h2>
@@ -44,7 +45,7 @@ const TechStack = ({techs}) => {
         <>
         <h4 className='text-xl font-semibold'>Technologies : </h4>
         <div className='flex flex-wrap mt-4 gap-x-2'>
-            {techs && techs.map(tech => Icons[tech])}
+            {techs && techs.map(tech => icons[tech])}
         </div>
         </>
     )
@@ -55,7 +56,7 @@ const Client = ({client , clientImg , clientDesc}) => {
         <>
         <hr />
         <div className='flex gap-3 items-center'>
-            <img className='size-20 rounded-full object-cover' src={clientImg} alt="client-logo" />
+            <Image width={300} height={300} className='size-20 rounded-full object-cover' src={clientImg} alt="client-logo" />
             <span className='space-y-2'>
                 <p className='font-semibold'>{client}</p>
                 <p>{clientDesc}</p>
@@ -67,7 +68,7 @@ const Client = ({client , clientImg , clientDesc}) => {
 
 export async function getStaticProps (context) {
 
-    let data = projects.find(project => project.id == context.params.Project)
+    let data = projectsData.find(project => project.id == context.params.Project)
 
     return {
       props : {

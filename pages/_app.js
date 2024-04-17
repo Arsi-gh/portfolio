@@ -14,14 +14,17 @@ import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import RefsProvider from '@/context/refsProvider'
+import ProjectsProvider from '@/context/projectsProvider'
 
 export default function App({ Component, pageProps }) {
   return (
     <RefsProvider>
-      <NextNProgress color="#404040"/>
-      <Header/>
-      <Component {...pageProps} />
-      <Footer/>
+      <ProjectsProvider>
+        <NextNProgress color="#404040"/>
+        <Header/>
+        <Component {...pageProps} />
+        <Footer/>
+      </ProjectsProvider>
     </RefsProvider>
   )
 }

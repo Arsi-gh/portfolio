@@ -10,7 +10,7 @@ import TechElem from '@/components/global/TechElement';
 export default function Tech() {
   return (
     <div className='flex-1 h-96 grid place-content-center'>
-        <div className='max-w-[50rem] flex overflow-hidden tech-container'>
+        <div className='max-w-[50rem] flex tech-container'>
             <TechWrapper/>
             <TechWrapper/>
             <TechWrapper/>  
@@ -21,7 +21,7 @@ export default function Tech() {
 
 const TechWrapper = () => {
     return (
-        <div className='2xl:min-w-[29.5rem] 2xl:max-w-[29.5rem] min-w-[30.1rem] h-full flex gap-x-2 justify-center content-start flex-wrap tech-animation'>
+        <div className='2xl:min-w-[29.5rem] 2xl:max-w-[29.5rem] min-w-[29.6rem]  h-full flex gap-x-2 justify-center content-start flex-wrap tech-animation'>
             <TechElem text="Tailwind css"><SiTailwindcss className='text-2xl'/></TechElem>
             <TechElem text="Next js"><TbBrandNextjs className='text-2xl'/></TechElem>
             <TechElem text="React query"><SiReactquery className='text-2xl'/></TechElem>

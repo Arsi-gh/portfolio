@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SkillChart() {
   return (
-    <div className='w-96 h-96 my-12 mx-auto relative'>
+    <div className='w-96 h-96 my-12 relative max-sm:scale-[90%] max-[400px]:scale-[80%] max-[350px]:scale-[70%] max-[300px]:scale-[60%]'>
         <svg className='absolute left-0 bottom-0 w-full h-full bg-zinc-50 backdrop-blur-3xl bg-opacity-80 shadow-2xl rounded-full rotate-90' xmlns="http://www.w3.org/2000/svg" version="1.1" width="70px" height="70px">
          <defs>
             <linearGradient id="GradientColor">
