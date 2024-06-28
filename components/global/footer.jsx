@@ -5,7 +5,7 @@ import { LuMoveRight } from "react-icons/lu";
 export default function Footer() {
   return (
     <div className='w-full p-4'>
-      <footer className='2xl:max-w-screen-2xl max-w-screen-xl p-10 mt-24 xl:mb-6  mx-auto text-neutral-800 bg-white border-t-2 border-zinc-100 shadow-2xl rounded-3xl flex gap-x-12 gap-y-6 flex-wrap justify-between max-lg:w-full max-sm:px-4'>
+      <footer className='2xl:max-w-screen-2xl max-w-screen-xl p-10 md:mt-24 mt-12 xl:mb-6  mx-auto text-primary-800 bg-secondary-800 border border-secondary-800 shadow-2xl rounded-3xl flex gap-x-12 gap-y-6 flex-wrap justify-between max-lg:w-full max-sm:px-4'>
         <div className='flex gap-x-20 max-md:flex-col max-md:gap-y-12'>
           <Offers/>
           <Links/>
@@ -21,8 +21,8 @@ export default function Footer() {
 
 const Socials = () => {
   return (
-    <ul className='flex flex-col gap-y-1 text-neutral-600'>
-      <li className='text-xl font-semibold mb-2 text-neutral-700'>Socials</li>
+    <ul className='flex flex-col gap-y-1 text-primary-600'>
+      <li className='text-xl font-semibold mb-2 text-primary-700'>Socials</li>
       <li className='text-lg'>Instagram</li>
       <li className='text-lg'>Telegram</li>
       <li className='text-lg'>Linkedin</li>
@@ -32,8 +32,8 @@ const Socials = () => {
 
 const Links = () => {
   return (
-    <ul className='flex flex-col gap-y-1 text-neutral-600'>
-      <li className='text-xl font-semibold mb-2 text-neutral-700'>Links</li>
+    <ul className='flex flex-col gap-y-1 text-primary-600'>
+      <li className='text-xl font-semibold mb-2 text-primary-700'>Links</li>
       <li><Link href=''>Services</Link></li>
       <li><Link href=''>Projects</Link></li>
       <li><Link href=''>About me</Link></li>
@@ -44,8 +44,8 @@ const Links = () => {
 
 const Offers = () => {
   return (
-    <ul className='flex flex-col gap-y-1 text-neutral-600'>
-      <li className='text-xl font-semibold mb-2 text-neutral-700'>Services</li>
+    <ul className='flex flex-col gap-y-1 text-primary-600'>
+      <li className='text-xl font-semibold mb-2 text-primary-700'>Services</li>
       <li className='text-lg'>Ui Ux design</li>
       <li className='text-lg'>Web development</li>
       <li className='text-lg'>Problem solving</li>
@@ -59,12 +59,12 @@ const Offers = () => {
 const EmailForm = () => {
   return (
     <form className='md:w-96 flex flex-col gap-y-3'>
-      <p className='font-semibold text-neutral-700'>Keep in touch </p>
+      <p className='font-semibold text-primary-700'>Keep in touch </p>
       <div className='relative '>
-        <input className='w-96 p-3 border border-zinc-300 rounded-full max-md:w-full' type="email" placeholder='Email'/>
-        <button className='rounded-full p-[9px] top-1 right-1 px-4 absolute bg-neutral-700 text-zinc-50 flex gap-2 items-center max-sm:px-3'><p className='max-sm:hidden'>Send</p><LuMoveRight className='text-2xl'/></button>
+        <input className='w-96 p-3 border border-zinc-300 dark:bg-primary-100 rounded-full max-md:w-full' type="email" placeholder='Email'/>
+        <button id='send-email' aria-label='send-email-btn' className='rounded-full p-[9px] top-1 right-1 px-4 absolute bg-primary-700 text-secondary-700 flex gap-2 items-center max-sm:px-3'><p className='max-sm:hidden'>Send</p><LuMoveRight className='text-2xl'/></button>
       </div>
-      <p className='text-neutral-600'>You will recieve every news related about new upcoming features and offers</p>
+      <p className='text-primary-600'>You will recieve every news related about new upcoming features and offers</p>
     </form>
   )
 }

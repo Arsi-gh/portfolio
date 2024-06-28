@@ -2,37 +2,44 @@ import React from 'react'
 import { FaGithub, FaInstagram, FaLinkedin, FaTelegramPlane } from 'react-icons/fa'
 import { TbPhone } from "react-icons/tb";
 import { MdAlternateEmail } from "react-icons/md";
+import Head from 'next/head';
 
 
 export default function Contact() {
   return (
-    <section className='2xl:max-w-screen-2xl max-w-screen-xl mx-auto flex flex-col items-center md:mt-14 mt-6 max-lg:px-4'>
-        <div className='w-[55rem] bg-white rounded-xl overflow-hidden shadow-2xl flex max-lg:w-full max-sm:flex-col'>
+    <>
+    <Head>
+      <title>Contact me</title>
+      <meta name="description" content="Contact"/>
+    </Head>
+    <section className='2xl:max-w-screen-2xl max-w-screen-xl mx-auto flex flex-col items-center md:mt-28 mt-24 max-lg:px-4'>
+        <div className='w-[55rem] bg-secondary-800 rounded-xl overflow-hidden shadow-2xl flex max-lg:w-full max-sm:flex-col'>
             <ContactForm/>
-            <div className='flex-1 bg-gradient-to-br from-neutral-800 to-neutral-600 text-white p-3 flex flex-col justify-between'>
+            <div className='sm:max-w-[20rem] bg-neutral-800 dark:bg-gradient-to-tl dark:from-neutral-800 dark:to-neutral-700 text-zinc-100 p-3 flex flex-col justify-between'>
                 <ContactOptions/>
             </div>
         </div>
     </section>
+    </>
   )
 }
 
 const ContactForm = () => {
     return (
-        <form className='w-2/3 p-4 flex flex-col gap-y-2 text-neutral-800 max-sm:w-full'>
+        <form className='flex-1 p-4 flex flex-col gap-y-2 text-primary-800 max-sm:w-full'>
             <label htmlFor="">Name</label>
-            <input type="text"/>
+            <input className='bg-inherit' type="text"/>
             <label htmlFor="">Email</label>
-            <input type="email"/>
+            <input className='bg-inherit' type="email"/>
             <label htmlFor="">Select category</label>
-            <select id="">
+            <select className='bg-inherit' id="">
                 <option value="">meet in person</option>
                 <option value="">Project reservation</option>
                 <option value="">Found a bug</option>
             </select>
             <label htmlFor="">Your message</label>
-            <textarea id="" className='h-52'></textarea>
-            <button className='rounded-lg bg-gradient-to-br from-neutral-800 to-neutral-600 text-white p-3'>Send request</button>
+            <textarea id="" className='h-52 bg-inherit'></textarea>
+            <button disabled className='rounded-lg bg-gradient-to-br from-primary-800 to-primary-600 text-secondary-800 p-3'>Can't send requests for now</button>
         </form>
     )
 }
@@ -41,7 +48,7 @@ const ContactOptions = () => {
     return (
         <>
         <p className='text-lg'>You'll recieve an email as soon as possible</p>
-        <div>
+        <div className=''>
             <p className='text-xl mt-4'>Socials : </p>
 
             <div className='flex items-center justify-between mt-4 mb-10 pr-2 justify-self-end'>

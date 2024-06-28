@@ -3,12 +3,59 @@
 @tailwind utilities;
 
 @layer base {
+
+    :root {
+        &,
+        &.light-mode {
+            --color-primary-900 : 24, 24, 27;
+            --color-primary-800 : 38, 38, 38;
+            --color-primary-700 : 64, 64, 64;
+            --color-primary-600 : 82, 82, 82;
+            --color-primary-500 : 115, 115, 115;
+            --color-primary-400 : 163, 163, 163;
+            --color-primary-300 : 212, 212, 212;
+            --color-primary-200 : 229, 229, 229;
+            --color-primary-100 : 245, 245, 245;
+            --color-secondary-900 : 255, 255, 255;
+            --color-secondary-800 : 255, 255, 255;
+            --color-secondary-700 : 228, 228, 231;
+            --color-secondary-600 : 212, 212, 216;
+            --color-secondary-500 : 161, 161, 170;
+            --color-secondary-400 : 113, 113, 122;
+            --color-secondary-300 : 82, 82, 91;
+            --color-secondary-200 : 63, 63, 70;
+            --color-secondary-100 : 39, 39, 42;
+        }
+
+        &.dark-mode {
+            --background-app : 200 , 200 , 200;
+            --color-primary-900 : 250, 250, 250;
+            --color-primary-800 : 244, 244, 245;
+            --color-primary-700 : 228, 228, 231;
+            --color-primary-600 : 212, 212, 216;
+            --color-primary-500 : 161, 161, 170;
+            --color-primary-400 : 113, 113, 122;
+            --color-primary-300 : 82, 82, 91;
+            --color-primary-200 : 63, 63, 70;
+            --color-primary-100 : 39, 39, 42;
+            --color-secondary-900 : 23, 23, 23;
+            --color-secondary-800 : 38, 38, 38;
+            --color-secondary-700 : 64, 64, 64;
+            --color-secondary-600 : 82, 82, 82;
+            --color-secondary-500 : 115, 115, 115;
+            --color-secondary-400 : 163, 163, 163;
+            --color-secondary-300 : 212, 212, 212;
+            --color-secondary-200 : 229, 229, 229;
+            --color-secondary-100 : 245, 245, 245;
+        }
+    }
+
     .gradiant {
         @apply bg-gradient-to-b from-neutral-800 to-neutral-600 text-white
     }
 
     .title {
-        @apply mx-auto text-5xl font-bold w-fit text-neutral-700 max-md:text-4xl max-sm:text-2xl
+        @apply mx-auto text-5xl font-bold w-fit text-primary-700 max-md:text-4xl max-sm:text-2xl
     }
 
     input , textarea {
@@ -22,6 +69,10 @@
     .tag {
         @apply p-2 rounded-full bg-zinc-200 flex items-center gap-x-3 max-sm:text-sm
     }
+
+    html {
+        @apply transition-all duration-300
+    }
 }
 
 #nprogress .spinner-icon {
@@ -29,9 +80,17 @@
 }
 
 html{
-    background-image: url('/patterns/dot-grid.webp');
-    box-shadow: inset 0     0 0 1000px rgba(228, 228, 228, 0.274);
     scroll-behavior: smooth;
+}
+
+html , .light-mode {
+    background-image: url('/patterns/dot-grid.webp');
+    box-shadow: inset 0 0 0 1000px rgba(228, 228, 228, 0.274);
+}
+
+html , .dark-mode {
+    background-repeat: repeat;
+    box-shadow: inset 0 0 0 1000px rgb(31, 30, 30);
 }
 
 input , textarea , select {
@@ -59,7 +118,7 @@ input , textarea , select {
 }
   
 ::-webkit-scrollbar-thumb {
-    background: rgb(168, 168, 168);
+    background: 168, 168, 168;
     border-radius: 10px;
 }
   

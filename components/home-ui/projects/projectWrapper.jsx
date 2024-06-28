@@ -51,8 +51,8 @@ export default function ProjectWrapper() {
       </Swiper>
     </div>
     <div className='flex w-fit mx-auto mb-24 gap-1'>
-      <button onClick={() => swiperRef.current.slidePrev()} className='slide-button-next p-3 rounded-full bg-white border border-zinc-200 shadow-xl text-neutral-600 cursor-pointer'><FaChevronLeft className='text-xl'/></button>
-      <button onClick={() => swiperRef.current.slideNext()} className='slide-button-prev p-3 rounded-full bg-white border border-zinc-200 shadow-xl text-neutral-600 cursor-pointer'><FaChevronRight className='text-xl'/></button>
+      <button id='prev-btn' aria-label="prev-slide-btn" onClick={() => swiperRef.current.slidePrev()} className='slide-button-next p-3 rounded-full bg-secondary-800 border border-secondary-600 shadow-xl text-primary-600 cursor-pointer'><FaChevronLeft className='text-xl'/></button>
+      <button id='next-btn' aria-label="next-slide-btn" onClick={() => swiperRef.current.slideNext()} className='slide-button-prev p-3 rounded-full bg-secondary-800 border border-secondary-600 shadow-xl text-primary-600 cursor-pointer'><FaChevronRight className='text-xl'/></button>
     </div>
     </>
   )

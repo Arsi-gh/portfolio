@@ -2,7 +2,7 @@ import { SiJest, SiMui, SiReact, SiReactquery, SiTailwindcss, SiThreedotjs } fro
 import TechElem from "../global/TechElement";
 import { TbApi, TbBrandCss3, TbBrandHtml5, TbBrandJavascript, TbBrandNextjs, TbBrandRedux, TbBrandSass, TbBrandTypescript, TbRegex } from "react-icons/tb";
 import { CgFormatLeft } from "react-icons/cg";
-import { FaAws } from "react-icons/fa";
+import { FaAws, FaBootstrap, FaNodeJs } from "react-icons/fa";
 import { BiLogoGit, BiLogoMongodb } from "react-icons/bi";
 import { FiFigma } from "react-icons/fi";
 import { LuFileJson } from "react-icons/lu";
@@ -37,16 +37,18 @@ export const icons = [
     <TechElem customClass="max-sm:text-sm max-sm:p-2" text="Jest"><SiJest className='text-2xl max-sm:text-lg'/></TechElem>,
     <TechElem customClass="max-sm:text-sm max-sm:p-2" text="Aws"><FaAws className='text-2xl max-sm:text-lg'/></TechElem>,
     <TechElem customClass="max-sm:text-sm max-sm:p-2" text="Json server"><LuFileJson className='text-2xl max-sm:text-lg'/></TechElem>,
+    <TechElem customClass="max-sm:text-sm max-sm:p-2" text="Bootstrap"><FaBootstrap className='text-2xl max-sm:text-lg'/></TechElem>,
+    <TechElem customClass="max-sm:text-sm max-sm:p-2" text="Node js"><FaNodeJs className='text-2xl max-sm:text-lg'/></TechElem>,
 ]
 
-export const typeIcons = [
-    <RiShoppingCart2Line className="text-xl"/>,
-    <IoLogoPwa className="text-xl"/>,
-    <MdOutlineWeb className="text-xl"/>,
-    <RiDashboard2Line className="text-xl"/>,
-    <BiFoodMenu className="text-xl"/>,
-    <RiUserLine className="text-xl"/>,
-]
+export const typeIcons = {
+    commerce : <RiShoppingCart2Line className="text-xl"/>,
+    pwa : <IoLogoPwa className="text-xl"/>,
+    web : <MdOutlineWeb className="text-xl"/>,
+    cms : <RiDashboard2Line className="text-xl"/>,
+    menu : <BiFoodMenu className="text-xl"/>,
+    personal : <RiUserLine className="text-xl"/>,
+}
 
 // 0 => Tailwind
 // 1 => Next
@@ -69,3 +71,5 @@ export const typeIcons = [
 // 18 => Jest
 // 19 => Aws
 // 20 => json server
+// 21 => bootstrap
+// 22 => node js

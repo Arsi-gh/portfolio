@@ -15,16 +15,26 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import RefsProvider from '@/context/refsProvider'
 import ProjectsProvider from '@/context/projectsProvider'
+import Head from 'next/head'
+import { DarkModeProvier } from '@/context/darkModaProvider'
 
 export default function App({ Component, pageProps }) {
   return (
-    <RefsProvider>
-      <ProjectsProvider>
-        <NextNProgress color="#404040"/>
-        <Header/>
-        <Component {...pageProps} />
-        <Footer/>
-      </ProjectsProvider>
-    </RefsProvider>
+    <>
+    <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="meta"/>
+        <link rel="shortcut icon" href="" />
+    </Head>
+    <DarkModeProvier>
+      <RefsProvider>
+        <ProjectsProvider>
+          <NextNProgress color="#404040"/>
+          <Header/>
+          <Component {...pageProps} />
+          <Footer/>
+        </ProjectsProvider>
+      </RefsProvider>
+    </DarkModeProvier>
+    </>
   )
 }
