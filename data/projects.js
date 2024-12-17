@@ -2,7 +2,7 @@ export const projectsData = [
     {
         id : 1, 
         title : 'Mobile cofee website redesign',
-        desc : "Client latest website was an awful example of development , performace and ui ux design . I redesigned the whole website plus adding lot of features such as Search option , category buttons , persion and english support , call action buttons and etc , to provide a fast and accessible menu for customers so they can choose as soon as possible. With the great power of Next js and tailwind css , I developed a compatible app that can be use in any dimension of screens  ",
+        desc : "Client latest website was an awful example of development , performace and ui ux design . at First I redesigned the whole website and added lot of features such as search bar , category buttons , persian and english language support , call action buttons and etc to provide a fast and accessible menu for customers so they can choose easily. With the great power of Next js for development and Tailwind css for styling , I've created a compatible app that can be use in any dimension of screens  ",
         types : ["menu"],
         images : [
             '/images/projects/mobilecafe/1.jpg',
@@ -24,7 +24,7 @@ export const projectsData = [
     {
         id : 2, 
         title : 'Simon pavilion site & menu redesign',
-        desc : "One my favorites digital menus that I've recently worked on it . The project had a complete redesign and development , because of latest website they were using , had such a bad ui desgin , user experiance , low site speed , weak core web vituals and no features . Sadly the project got decliend from the client and never got upload to their main server .",
+        desc : "One my favorites digital menus that I've recently worked on it . The project had a complete redesign , the latest app they were using , had such a bad ui desgin , user experiance , low site speed , weak core web vituals and no features . Sadly the project got decliend from the client and never got uploaded to their main server .",
         types : ["menu"],
         images : [
             '/images/projects/simon/1.jpg',
@@ -46,7 +46,7 @@ export const projectsData = [
     {
         id : 3, 
         title : 'Real estate + CMS web application',
-        desc : "Real estate web application desgin , providing a great and easy access for customers to properties .The project has 3 diffrent authentications rols (Admin , Agent , User) . Admin can control diffrent parts of the application like deleting , editing uploaded estates , kick users , controling agents , answering and receiving requests plus messages from agents and users . Estate pages are based on SSG  and dashboard is based on SSR . Users can create accounts and add theri specify estate to their favorite list . ",
+        desc : "Real estate web application desgin , providing a great features and easy access for customers to find properties .The project has 3 diffrent authentications rols (Admin , Agent , User) . Admin can control diffrent parts of the application like deleting , editing uploaded estates , kick users , controling agents , answering and receiving requests plus messages from agents and users . Estate pages are based on SSG  and dashboard is based on SSR . Users can create accounts and add theri specify estate to their favorite list . ",
         types : ["web" , "cms"],
         images : [
             '/images/projects/real-estate/1.jpg',
@@ -65,7 +65,7 @@ export const projectsData = [
     {
         id : 4, 
         title : 'Plant store e-commerce web application',
-        desc : "I've started this project by designing ui design. I've used react plus tailwind css to develop a fast and best practice e-commerce web application . The project has 2 diffrent authentication roles ( Admin and user) . Admin has options like user and product list , a complete report of day , month and the year , events panel , tickets , off code and transations control . The basket page has 3 diffrent levels of complition with user step guide that to create a better UX expreince . the project is completly responsive and can be display in both moblie and desktop displays.",
+        desc : "I've started this project by designing its UI. I've used react plus tailwind css to develop a fast and best practice e-commerce web application . The project has 2 diffrent authentication roles ( Admin and user) . Admin has options like user and product list , a complete report of day , month and the year , events panel , tickets , off code and transations control . The basket page has 3 diffrent levels of complition with user step guide that to create a better UX expreince . the project is completly responsive and can be display in both moblie and desktop displays.",
         types : ["commerce" , "cms"],
         images : [
             '/images/projects/plnat-store/1.jpg',
@@ -121,5 +121,26 @@ export const projectsData = [
         techs : [0 , 1 , 5],
         createdAt : '',
         link : 'https://meydoon.netlify.app/',
+    },
+
+    {
+        id : 7, 
+        title : 'Hojreh cafe , digital menu plus shopping cart',
+        desc : 'Hojreh is a takeaway cafe based in taleghani street , the project was designed from their visual identity and developed based on greatest technologies to create easy access for customers so they can order easily ',
+        types : ["menu"],
+        images : [
+            '/images/projects/hojreh/6.JPG',
+            '/images/projects/hojreh/1.JPG',
+            '/images/projects/hojreh/2.JPG',
+            '/images/projects/hojreh/3.JPG',
+            '/images/projects/hojreh/4.JPG',
+            '/images/projects/hojreh/5.JPG',
+        ],
+        client : 'Hojreh cafe',
+        clientDesc : 'Takeaway cafe',
+        clientImg : '',
+        techs : [0 , 1],
+        createdAt : '',
+        link : 'https://hojrehcafe.netlify.app/',
     },
 ]

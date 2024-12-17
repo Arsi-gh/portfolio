@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ProjectCard from './projectCard'
 import { useProjects } from '@/context/projectsProvider'
 import { useRouter } from 'next/router'
@@ -10,7 +10,7 @@ export default function ProjectsContainer() {
   const router = useRouter()
 
   const {isDescending} = router.query
-  
+
   if (!projects || !projects.length) return <div className='p-3 font-semibold text-2xl flex-1  grid place-content-center max-sm:mt-4 text-primary-800'>Nothing found</div>
 
   return (

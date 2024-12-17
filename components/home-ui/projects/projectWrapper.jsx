@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import Project from './project';
@@ -25,7 +25,7 @@ export default function ProjectWrapper() {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        initialSlide={2}
+        initialSlide={3}
         breakpoints= {{
           100 : {
             slidesPerView : 3

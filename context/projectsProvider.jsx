@@ -12,6 +12,8 @@ const ProjectsProvider = ({children}) => {
 
     useEffect(() => {
 
+        setProjects(projectsData)
+
         const {category , techs , isDescending} = router.query
 
         category && categoryQuery(category)

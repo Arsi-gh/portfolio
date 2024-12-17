@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <div className='w-full bg-primary-100 max-md:p-1 fixed top-0 z-50 mb-24'>
-    <header className={`2xl:max-w-screen-2xl max-w-screen-xl md:h-20 mx-auto text-primary-700  flex items-center gap-x-4 text-lg font-semibold transition-all duration-300  max-md:flex-wrap max-md:p-2 `}>
+    <header className={`2xl:max-w-screen-2xl max-w-screen-xl max-xl:px-3 md:h-20 mx-auto text-primary-700  flex items-center gap-x-4 text-lg font-semibold transition-all duration-300  max-md:flex-wrap max-md:p-2 `}>
         <button id='sidebar-btn' aria-label='sidebar-btn' onClick={() => setDisplaySide(!displaySide)} className='md:hidden'><HiOutlineMenu className='text-3xl'/></button>
         <p className='md:hidden font-semibold flex-1 text-xl capitalize'>{router.asPath == '/' ? 'Home' : router.asPath.substring(1).slice(0 , 8)}</p>
         <Links/>
@@ -79,12 +79,12 @@ const SidebarLinks = ({display}) => {
   }
 
   return (
-    <div className={`transition-all duration-300 ${display ? 'max-h-64' : 'max-h-0 -mt-8'}`}>
-      <ul className={`w-full flex flex-col ml-1 mt-3 gap-y-4 text-base md:hidden overflow-hidden transition-all duration-300 ${display ? 'opacity-100 delay-75' : 'opacity-0'}`}>
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="/projects">Projects</Link></li>
-        <li onClick={() => handleRoute(aboutRef)}>About me</li>
-        <li><Link href='/contact'>Contact me</Link></li>
+    <div className={`w-full md:hidden transition-all duration-300 ${display ? 'max-h-64 mt-3' : 'max-h-0 -mt-8'}`}>
+      <ul className={`flex flex-col ml-1 text-base transition-all duration-300  ${display ? 'opacity-100 delay-75' : 'opacity-0 max-h-0 overflow-hidden'}`}>
+        <li className='*:flex-1 py-3 cursor-pointer'><Link href="/">Home</Link></li>
+        <li className='*:flex-1 py-3 cursor-pointer'><Link href="/projects">Projects</Link></li>
+        <li className='*:flex-1 py-3 cursor-pointer' onClick={() => handleRoute(aboutRef)}>About me</li>
+        <li className='*:flex-1 py-3 cursor-pointer'><Link href='/contact'>Contact me</Link></li>
       </ul>
     </div>
   )

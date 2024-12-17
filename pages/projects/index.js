@@ -11,7 +11,7 @@ export default function Projects() {
       <title>Projects page</title>
       <meta name="description" content="Projects page"/>
     </Head>
-    <main className='sm:mt-28 mt-24 2xl:max-w-screen-2xl max-w-screen-xl mx-auto max-xl:px-4 flex gap-3 max-sm:px-2 max-md:flex-col'>
+    <main className='sm:mt-28 mt-20 2xl:max-w-screen-2xl max-w-screen-xl mx-auto max-xl:px-4 flex gap-3 max-sm:px-2 max-md:flex-col'>
         <ProjectFilter/>
         <ResponsiveFilter/>
         <ProjectsContainer/>

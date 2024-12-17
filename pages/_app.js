@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import "/components/home-ui/skillChart/skillChart.css"
+import "/components/home-ui/skillChart/chart.css"
 import "/components/home-ui/tech/tech.css"
 import "/components/home-ui/story/story.css"
 import "/components/home-ui/projects/project.css"

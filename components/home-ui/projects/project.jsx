@@ -9,9 +9,9 @@ export default function Project({id , title , images , desc}) {
           <img loading='lazy' clasName='w-full h-full object-contain bg-secondary-800 rounded-t-2xl border-b border-zinc-300' src={images[0]} alt="project-image" />
           <span className='hidden dark:block w-full h-full bg-neutral-800 bg-opacity-30 absolute top-0'></span>
         </div>
-        <p className='sm:mt-2 text-lg font-semibold p-2 px-4 max-sm:text-sm  max-sm:truncate'>{title}</p>
-        <p className='px-4 line-clamp-5 max-sm:line-clamp-1 text-primary-600'>{desc}</p>
-        <Link href={`/projects/${id}`} className='p-3 w-full flex items-center justify-center underline gap-2 '>See more about the project<FaChevronRight/></Link>
+        <p className='sm:mt-2 text-lg line-clamp-1 font-semibold p-2 px-4 max-sm:text-sm '>{title}</p>
+        <p className='px-4 line-clamp-5 max-sm:line-clamp-4 max-[400px]:line-clamp-2 text-primary-600'>{desc}</p>
+        <Link href={`/projects/${id}`} className='sm:p-3 p-2 w-full flex items-center justify-center underline gap-2 '>See more about the project<FaChevronRight/></Link>
     </div>
   )
 }

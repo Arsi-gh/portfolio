@@ -12,7 +12,7 @@ export default function Contact() {
       <title>Contact me</title>
       <meta name="description" content="Contact"/>
     </Head>
-    <section className='2xl:max-w-screen-2xl max-w-screen-xl mx-auto flex flex-col items-center md:mt-28 mt-24 max-lg:px-4'>
+    <section className='2xl:max-w-screen-2xl max-w-screen-xl mx-auto flex flex-col items-center md:mt-28 mt-20 max-lg:px-4'>
         <div className='w-[55rem] bg-secondary-800 rounded-xl overflow-hidden shadow-2xl flex max-lg:w-full max-sm:flex-col'>
             <ContactForm/>
             <div className='sm:max-w-[20rem] bg-neutral-800 dark:bg-gradient-to-tl dark:from-neutral-800 dark:to-neutral-700 text-zinc-100 p-3 flex flex-col justify-between'>

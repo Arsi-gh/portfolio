@@ -1,4 +1,4 @@
-import AboutMe from "@/components/home-ui/aboutMe";
+import AboutMe from "@/components/home-ui/about/aboutMe";
 import CommentWrapper from "@/components/home-ui/comments/commentWrapper";
 import Faq from "@/components/home-ui/faq";
 import MoreProject from "@/components/home-ui/moreProject";

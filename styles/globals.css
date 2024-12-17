@@ -16,6 +16,7 @@
             --color-primary-300 : 212, 212, 212;
             --color-primary-200 : 229, 229, 229;
             --color-primary-100 : 245, 245, 245;
+            --color-primary-50 : 255, 255, 255;
             --color-secondary-900 : 255, 255, 255;
             --color-secondary-800 : 255, 255, 255;
             --color-secondary-700 : 228, 228, 231;
@@ -38,6 +39,7 @@
             --color-primary-300 : 82, 82, 91;
             --color-primary-200 : 63, 63, 70;
             --color-primary-100 : 39, 39, 42;
+            --color-primary-50 : 39, 39, 42;
             --color-secondary-900 : 23, 23, 23;
             --color-secondary-800 : 38, 38, 38;
             --color-secondary-700 : 64, 64, 64;
@@ -50,8 +52,8 @@
         }
     }
 
-    .gradiant {
-        @apply bg-gradient-to-b from-neutral-800 to-neutral-600 text-white
+    .gradient {
+        @apply bg-gradient-to-br from-primary-800 to-primary-700 text-primary-100
     }
 
     .title {
@@ -118,7 +120,7 @@ input , textarea , select {
 }
   
 ::-webkit-scrollbar-thumb {
-    background: 168, 168, 168;
+    background: rgb(185, 185, 185);
     border-radius: 10px;
 }
   

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { SiJest, SiMui, SiReact, SiReactquery, SiTailwindcss, SiThreedotjs } from "react-icons/si";
 import { TbApi , TbBrandCss3, TbBrandHtml5, TbBrandJavascript, TbBrandNextjs , TbBrandRedux, TbBrandSass, TbBrandTypescript, TbRegex } from "react-icons/tb";
 import { FiFigma } from "react-icons/fi";
@@ -8,8 +8,17 @@ import { FaAws } from "react-icons/fa";
 import TechElem from '@/components/global/TechElement';
 
 export default function Tech() {
+
+  const [font , setFont] = useState("font-semibold")
+
+  useEffect(() => {
+    if (window.navigator.userAgent.includes("Mac")) {
+      setFont("")
+    }
+  }, []);
+
   return (
-    <div className='max-w-screen-xl mx-auto  p-3 flex tech-container'>
+    <div className={`max-w-screen-xl mx-auto  p-3 flex tech-container ${font}`}>
         <TechWrapper/>
         <TechWrapper/>
         <TechWrapper/>  

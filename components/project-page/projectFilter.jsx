@@ -14,16 +14,14 @@ import { RiShoppingCart2Line } from "react-icons/ri";
 import { BiFoodMenu } from "react-icons/bi";
 import { RiUserLine } from "react-icons/ri";
 import { RiDashboard2Line } from "react-icons/ri";
-import { projectsData } from "@/data/projects";
-import { GrAppsRounded } from "react-icons/gr";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
 
 export default function ProjectFilter() {
   return (
-    <div className="gap-2 rounded-lg border border-secondary-700 overflow-hidden h-fit w-64 bg-secondary-800 bg-opacity-90 text-primary-700 sticky top-4 shadow-lg max-md:hidden">
+    <div className="gap-2 rounded-xl border border-secondary-700 overflow-hidden h-fit w-64 bg-secondary-800/70 text-primary-700 sticky top-24 shadow-lg max-md:hidden">
         <p className="p-3 text-lg font-semibold w-full">Filters</p>
-        {/* <ProjectFilterdTags/> */}
+        <ProjectFilterdTags/>
         <ProjectSort/>
         <ProjectTypes/>
         <ProjectTechs/>
@@ -111,12 +109,21 @@ export const ProjectTechs = () => {
 export const ProjectSort = () => {
   
   const router = useRouter();
-
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  
   const {isDescending} = router.query
   
   const paramHandler = (param) => {
-    router.query.isDescending = param
-    router.push(router)
+
+    if (param) {
+      router.query.isDescending = param
+      router.push(router)
+    } else {
+      const nextSearchParams = new URLSearchParams(searchParams.toString())
+      nextSearchParams.delete('isDescending')
+      router.replace(`${pathname}?${nextSearchParams}`)
+    }
   }
 
   return (
