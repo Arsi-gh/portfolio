@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { GoChevronDown } from "react-icons/go";
-import ProjectFilterdTags from "./projectFilterdTags";
 import { PiSortAscending } from "react-icons/pi";
 import { PiSortDescending } from "react-icons/pi";
 import { SiJest, SiMui, SiReact, SiReactquery, SiTailwindcss, SiThreedotjs } from "react-icons/si";
@@ -16,12 +15,13 @@ import { RiUserLine } from "react-icons/ri";
 import { RiDashboard2Line } from "react-icons/ri";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
+import ProjectFilteredTags from "./projectFilteredTags";
 
 export default function ProjectFilter() {
   return (
     <div className="gap-2 rounded-xl border border-secondary-700 overflow-hidden h-fit w-64 bg-secondary-800/70 text-primary-700 sticky top-24 shadow-lg max-md:hidden">
         <p className="p-3 text-lg font-semibold w-full">Filters</p>
-        <ProjectFilterdTags/>
+        <ProjectFilteredTags/>
         <ProjectSort/>
         <ProjectTypes/>
         <ProjectTechs/>

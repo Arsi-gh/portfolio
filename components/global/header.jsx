@@ -24,7 +24,7 @@ export default function Header() {
   const { isDarkMode , toggleDarkMode } = useDarkMode()
 
   return (
-    <div className='w-full bg-primary-100 max-md:p-1 fixed top-0 z-50 mb-24'>
+    <div className='w-full bg-primary-100 max-md:p-1 fixed top-0 z-40 mb-24'>
     <header className={`2xl:max-w-screen-2xl max-w-screen-xl max-xl:px-3 md:h-20 mx-auto text-primary-700  flex items-center gap-x-4 text-lg font-semibold transition-all duration-300  max-md:flex-wrap max-md:p-2 `}>
         <button id='sidebar-btn' aria-label='sidebar-btn' onClick={() => setDisplaySide(!displaySide)} className='md:hidden'><HiOutlineMenu className='text-3xl'/></button>
         <p className='md:hidden font-semibold flex-1 text-xl capitalize'>{router.asPath == '/' ? 'Home' : router.asPath.substring(1).slice(0 , 8)}</p>

@@ -3,7 +3,7 @@ import { BiCoffeeTogo } from "react-icons/bi";
 import { TbLogout2 } from "react-icons/tb";
 import { TbReceipt } from "react-icons/tb";
 
-export default function ProjectLinks() {
+export default function ProjectLinks({resCss}) {
   return (
     <>
         <button className='font-semibold text-secondary-200 border p-3 rounded-lg flex justify-between items-center'>Project receipt <TbReceipt className='text-2xl'/></button>

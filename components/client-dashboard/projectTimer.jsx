@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function ProjectTimer() {
+export default function ProjectTimer({resCss}) {
   return (
-    <div className='flex justify-center items-center gap-x-2 p-4 border rounded-2xl w-96 text-secondary-300'>
+    <div className={`${resCss} flex justify-center items-center gap-x-2 p-4 border rounded-2xl w-96 text-secondary-300`}>
         <span className='text-center'>
             <b className='text-7xl'>23</b>
             <p className='text-secondary-400 mt-2 font-semibold'>Days</p>

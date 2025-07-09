@@ -17,24 +17,26 @@ import RefsProvider from '@/context/refsProvider'
 import ProjectsProvider from '@/context/projectsProvider'
 import Head from 'next/head'
 import { DarkModeProvier } from '@/context/darkModaProvider'
+import LoadingLayout from '@/components/global/LoadingLayout'
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-    <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="meta"/>
-        <link rel="shortcut icon" href="" />
-    </Head>
-    <DarkModeProvier>
-      <RefsProvider>
-        <ProjectsProvider>
-          <NextNProgress color="#404040"/>
-          <Header/>
-          <Component {...pageProps} />
-          <Footer/>
-        </ProjectsProvider>
-      </RefsProvider>
-    </DarkModeProvier>
+      <Head>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" key="meta"/>
+          <link rel="shortcut icon" href="" />
+      </Head>
+        <DarkModeProvier>
+          <RefsProvider>
+              <ProjectsProvider>
+                <LoadingLayout/>
+                <NextNProgress color="#404040"/>
+                <Header/>
+                <Component {...pageProps} />
+                <Footer/>
+              </ProjectsProvider>
+          </RefsProvider>
+        </DarkModeProvier>
     </>
   )
 }

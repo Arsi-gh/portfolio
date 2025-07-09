@@ -2,7 +2,7 @@ export const projectsData = [
     {
         id : 1, 
         title : 'Mobile cofee website redesign',
-        desc : "Client latest website was an awful example of development , performace and ui ux design . at First I redesigned the whole website and added lot of features such as search bar , category buttons , persian and english language support , call action buttons and etc to provide a fast and accessible menu for customers so they can choose easily. With the great power of Next js for development and Tailwind css for styling , I've created a compatible app that can be use in any dimension of screens  ",
+        desc : "The client’s latest website was a poor example of development, performance, and UI/UX design. Initially, I redesigned the entire website and added numerous features, including a search bar, category buttons, support for Persian and English languages, call-to-action buttons, and more. These enhancements were made to provide a fast and accessible menu for customers, enabling them to make informed choices easily. Leveraging the capabilities of Next.js for development and Tailwind CSS for styling, I crafted a versatile application that can be seamlessly integrated into various screen dimensions.",
         types : ["menu"],
         images : [
             '/images/projects/mobilecafe/1.jpg',
@@ -24,7 +24,7 @@ export const projectsData = [
     {
         id : 2, 
         title : 'Simon pavilion site & menu redesign',
-        desc : "One my favorites digital menus that I've recently worked on it . The project had a complete redesign , the latest app they were using , had such a bad ui desgin , user experiance , low site speed , weak core web vituals and no features . Sadly the project got decliend from the client and never got uploaded to their main server .",
+        desc : "One of my favorite digital menus that I recently worked on is the project I mentioned earlier. It underwent a complete redesign. However, the latest app they were using had a poor user interface design, user experience, low site speed, weak core web vitals, and lacked essential features. Regrettably, the project was canceled by the client, and it never made it to their main server.",
         types : ["menu"],
         images : [
             '/images/projects/simon/1.jpg',
@@ -46,7 +46,7 @@ export const projectsData = [
     {
         id : 3, 
         title : 'Real estate + CMS web application',
-        desc : "Real estate web application desgin , providing a great features and easy access for customers to find properties .The project has 3 diffrent authentications rols (Admin , Agent , User) . Admin can control diffrent parts of the application like deleting , editing uploaded estates , kick users , controling agents , answering and receiving requests plus messages from agents and users . Estate pages are based on SSG  and dashboard is based on SSR . Users can create accounts and add theri specify estate to their favorite list . ",
+        desc : "Real estate web application design, offering a comprehensive set of features and easy access for customers to find properties. The project encompasses three distinct authentication roles: Admin, Agent, and User. The Admin can manage various aspects of the application, including deleting, editing, and removing uploaded estates, suspending users, controlling agents, responding to and receiving requests and messages from agents and users. Estate pages are built using SSG, while the dashboard is based on SSR. Users can create accounts and add their preferred estates to their favorites list.",
         types : ["web" , "cms"],
         images : [
             '/images/projects/real-estate/1.jpg',
@@ -65,7 +65,7 @@ export const projectsData = [
     {
         id : 4, 
         title : 'Plant store e-commerce web application',
-        desc : "I've started this project by designing its UI. I've used react plus tailwind css to develop a fast and best practice e-commerce web application . The project has 2 diffrent authentication roles ( Admin and user) . Admin has options like user and product list , a complete report of day , month and the year , events panel , tickets , off code and transations control . The basket page has 3 diffrent levels of complition with user step guide that to create a better UX expreince . the project is completly responsive and can be display in both moblie and desktop displays.",
+        desc : "I’ve initiated this project by designing its user interface. I’ve utilized React and Tailwind CSS to develop a fast and well-practiced e-commerce web application. The project encompasses two distinct authentication roles: Admin and User. The Admin has access to various options, including user and product lists, a comprehensive daily, monthly, and yearly report, an events panel, tickets, off codes, and transactions control. The basket page offers three different levels of complexity, accompanied by a user step guide to enhance the user experience. The project is fully responsive and can be displayed on both mobile and desktop devices.",
         types : ["commerce" , "cms"],
         images : [
             '/images/projects/plnat-store/1.jpg',
@@ -78,13 +78,13 @@ export const projectsData = [
         ],
         techs : [2 , 0 , 6 , 11 , 20 , 10 , 17],
         createdAt : '',
-        link : 'https://plant-shopping-store.netlify.app/',
+        link : 'https://github.com/Arsi-gh/react-shopping-project',
     },
 
     {
         id : 5, 
         title : 'Shanderman menu development',
-        desc : 'Shanderman digital menu. Creating responsive and custom digital menu , providing easy and fast access for the consumer . The project is a SPA website powerd by amazing features of Next js and styling with tailwind css to be the best in all standards , best practices and accessibility .',
+        desc : "Shanderman Digital Menu: Creating responsive and customizable digital menus, we ensure easy and fast access for consumers. Powered by the amazing features of Next.js, our project adheres to the best standards, practices, and accessibility guidelines.",
         types : ["menu"],
         images : [
             '/images/projects/shanderman/1.jpg',
@@ -104,7 +104,7 @@ export const projectsData = [
     {
         id : 6, 
         title : 'Meydoon cafe , digital menu redesigh and development',
-        desc : 'Meydoon digital menu. Creating responsive and custom digital menu , providing easy and fast access for the consumer . The project is a SPA website powerd by amazing features of Next js and styling with tailwind css to be the best in all standards , best practices and accessibility .',
+        desc : "Meydoon Digital Menu: Creating Responsive and Custom Digital Menus We specialize in designing responsive and customizable digital menus that provide easy and fast access for consumers. Our project is a SPA website powered by the incredible features of Next.js and styled with Tailwind CSS to ensure it adheres to the best standards, practices, and accessibility guidelines.",
         types : ["menu"],
         images : [
             '/images/projects/meydoon/2.JPG',
@@ -126,7 +126,7 @@ export const projectsData = [
     {
         id : 7, 
         title : 'Hojreh cafe , digital menu plus shopping cart',
-        desc : 'Hojreh is a takeaway cafe based in taleghani street , the project was designed from their visual identity and developed based on greatest technologies to create easy access for customers so they can order easily ',
+        desc : "Hojreh, a takeaway cafe nestled on Taleghani Street, was designed with its visual identity in mind. The cafe employs cutting-edge technologies to ensure easy access for customers, streamlining the ordering process.",
         types : ["menu"],
         images : [
             '/images/projects/hojreh/6.JPG',
@@ -143,4 +143,26 @@ export const projectsData = [
         createdAt : '',
         link : 'https://hojrehcafe.netlify.app/',
     },
+
+    {
+        id : 8, 
+        title : 'Maadi cafe , digital menu design',
+        desc : "Maadi is a café and restaurant located in the well-known area of Charbaq, Maadi Niasarm. The project began with a unique design inspired by their brand identity and was later developed using the Next.js framework and styled with Tailwind CSS.",
+        types : ["menu"],
+        images : [
+            '/images/projects/maadi/maadi-1.png',
+            '/images/projects/maadi/maadi-2.png',
+            '/images/projects/maadi/maadi-3.png',
+            '/images/projects/maadi/maadi-4.png',
+            '/images/projects/maadi/maadi-5.png',
+            '/images/projects/maadi/maadi-6.png',
+        ],
+        client : 'Maaid cafe',
+        clientDesc : 'Cafe & Restaurant',
+        clientImg : '/images/projects/maadi/maadi-logo.png',
+        techs : [0 , 1],
+        createdAt : '',
+        link : 'http://cafemaadi.ir/',
+    },
 ]
+

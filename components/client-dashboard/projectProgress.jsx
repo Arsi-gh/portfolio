@@ -1,9 +1,9 @@
 import React from 'react'
 import { FaChartPie } from "react-icons/fa6";
 
-export default function ProjectProgress() {
+export default function ProjectProgress({resCss}) {
   return (
-    <section className='p-4 border rounded-xl flex justify-between items-center text-secondary-200 relative'>
+    <section className={`${resCss} p-4 border rounded-xl flex justify-between items-center text-secondary-200 relative`}>
         <div className='space-y-1'>
             <h4 className='font-semibold text-lg mb-6 flex gap-x-2 items-center text-secondary-300'><FaChartPie className='text-2xl'/>Project progress : </h4>
             <p>Duration : 30 days</p>

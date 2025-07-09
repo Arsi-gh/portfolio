@@ -19,9 +19,9 @@ const editStatus = {
 
 
 
-export default function ProjectEdits() {
+export default function ProjectEdits({resCss}) {
   return (
-    <section className='p-3 rounded-xl w-96 border space-y-3'> 
+    <section className={`${resCss} p-3 rounded-xl w-96 border space-y-3`}> 
         <p className='text-secondary-300 font-semibold flex gap-x-2 items-center'><IoTicketOutline className='text-2xl'/>Edits and requests</p>
         <div className='h-[33.6rem] mt-3 p-2 border border-inherit rounded-xl text-secondary-400 bg-primary-100 space-y-2 overflow-x-scroll'>
           <EditReq icon={editStatus.approved}/>

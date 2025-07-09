@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { HiOutlineTrash } from "react-icons/hi2";
 import { HiOutlineXMark } from "react-icons/hi2";
 
-export default function ProjectFilterdTags() {
+export default function ProjectFilteredTags() {
 
   const [displayTags , setDisplayTags] = useState(false)
 
@@ -19,12 +19,18 @@ export default function ProjectFilterdTags() {
   } , [router])
 
   if (displayTags) return (
-    <>
-    <div className="p-2 flex flex-wrap gap-2 items-center">
-        {Object.entries(router.query).map((que) => <TagItem key={que[0]} param={que}/>)}
-    </div>
-    <button onClick={() => router.replace('/projects')} className='p-3 w-full text-red-500 font-semibold flex justify-between items-center border-t hover:bg-zinc-50'>Remove tags<HiOutlineTrash className='text-2xl'/></button>
-    </>
+    <nav className='max-md:flex max-md:items-center max-md:flex-row-reverse'>
+      <div className="p-2 flex gap-2 items-center md:flex-wrap max-md:flex-1 overflow-auto">
+          {Object.entries(router.query).map((que) => <TagItem key={que[0]} param={que}/>)}
+      </div>
+      <button onClick={() => router.replace('/projects')} className='
+        text-red-500 font-semibold bg-secondary-800/70 border-t border-secondary-700 flex justify-between gap-x-1 items-center hover:bg-primary-100
+        md:border-t md:w-full md:p-3 
+        max-md:flex-row-reverse max-md:rounded-full max-md:text-sm max-md:py-2 max-md:px-3 max-md:border
+      '>
+        Remove tags<HiOutlineTrash className='md:text-2xl text-lg'/>
+      </button>
+    </nav>
   )
 }
 
@@ -46,7 +52,10 @@ const TagItem = ({param}) => {
   }
 
   return (
-    <span className="p-1 px-2 rounded-full bg-zinc-100 border flex items-center font-semibold uppercase text-sm gap-x-1">
+    <span className="
+    p-1 px-2 rounded-full bg-secondary-800/70 text-primary-700 border border-secondary-700 flex items-center font-semibold uppercase text-sm gap-x-1
+    max-md:p-2
+    ">
       {value === "true" ? 'descending' : value}
       <button onClick={() => removeParam()}>
         <HiOutlineXMark className='cursor-pointer text-xl text-zinc-600'/>

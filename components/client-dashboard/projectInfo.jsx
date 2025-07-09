@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function ProjectInfo() {
+export default function ProjectInfo({resCss}) {
   return (
-    <div className='p-3 border rounded-2xl text-secondary-300 w-96 space-y-2'>
+    <div className={`${resCss} p-3 border rounded-2xl text-secondary-300 w-96 space-y-2`}>
         <p className='font-semibold'>Project Title </p>
        <span className='w-full inline-block border-t border-primary-300'></span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure in reprehenderit officia inventore</p>

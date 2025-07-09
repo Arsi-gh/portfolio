@@ -4,9 +4,9 @@ import { HiCheck } from "react-icons/hi";
 import { PiTimerBold } from "react-icons/pi";
 
 
-export default function ProjectSteps() {
+export default function ProjectSteps({resCss}) {
   return (
-    <div className='p-3 rounded-xl border space-y-3 w-[22rem] font-semibold text-secondary-300'>
+    <div className={`${resCss} p-3 rounded-xl border space-y-3 w-[22rem] font-semibold text-secondary-300`}>
         <p className='text-secondary-200'>Steps : </p>
         <p className='p-3 rounded-lg border border-inherit bg-primary-100 line-through flex justify-between items-center'>Host and domain registration <HiCheck className='text-2xl'/></p>
         <p className='p-3 rounded-lg border border-inherit bg-primary-100 line-through flex justify-between items-center'>Layout design <HiCheck className='text-2xl'/></p>

@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
         <EmailForm/>
         <span className='w-full h-[1px] bg-zinc-200'></span>
-        <p>© 2024 copyright. all rights reserved</p>
+        <p>© 2025 copyright. all rights reserved</p>
       </footer>
     </div>
   )
