@@ -26,7 +26,7 @@ export default function ImageGallary({images}) {
 
 const ImgItem = ({index , currentIndex , img , customClass , setIndex}) => {
   return (
-    <span onClick={() => setIndex(index)} className={`cursor-pointer ${customClass} rounded-xl bg-white max-sm:min-w-[10rem] max-sm:h-[5rem] overflow-hidden shadow-sm relative outline-offset-2 outline-primary-600 ${currentIndex == index && 'outline outline-2'}`}>
+    <span onClick={() => setIndex(index)} className={`cursor-pointer ${customClass} rounded-xl bg-white max-sm:min-w-[10rem] max-sm:h-[5rem] overflow-hidden shadow-sm relative outline-offset-2 outline-primary-600 ${currentIndex == index ? 'outline outline-2' : ''}`}>
       <span className='w-full h-full bg-neutral-800 absolute top-0 left-0 z-10 bg-opacity-30'></span>
       <img loading='lazy' className='w-full h-full object-contain' src={img} alt="img-gallary" />
     </span>

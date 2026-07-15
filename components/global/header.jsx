@@ -34,7 +34,7 @@ export default function Header() {
         <div className='flex text-base relative'>
           {/* <button id='lng-btn' aria-label='lng-btn' onClick={() => setDisplayLang(!displayLang)} className='p-3 px-4 rounded-xl flex gap-x-3 items-center border-2 md:shadow-md transition-all max-sm:py-2'><EngFlag/><p className='max-sm:hidden'>Eng</p><FaChevronDown className={`transition-all ${displayLang ? 'rotate-180' : 'rotate-0'}`}/></button> */}
           <a aria-label='github-profile' target="_blank" href='https://github.com/Arsi-gh' rel="noopener noreferrer" className='p-2 px-3 flex gap-2 items-center bg-gradient-to-bl from-neutral-800 to-neutral-700 dark:from-neutral-700 dark:to-neutral-600 md:shadow-md text-white rounded-xl'><p className='max-sm:hidden'>Github</p><FaGithub className='text-3xl max-sm:text-2xl'/></a>
-          {displayLang && <LngSelection displayHandler={setDisplayLang}/>}
+          {displayLang ? <LngSelection displayHandler={setDisplayLang}/> : <></>}
         </div>
         <SidebarLinks display={displaySide}/>
     </header>

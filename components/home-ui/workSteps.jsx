@@ -1,13 +1,13 @@
 import React from 'react'
 import { CgSearch } from 'react-icons/cg';
 import { IoIosCalendar } from "react-icons/io";
-import { LuCode2 } from "react-icons/lu";
 import { BsStars } from "react-icons/bs";
+import { PiCodeBold } from "react-icons/pi";
 
 const steps = [
   {id : 1 , title : "Search" , image : "/images/progress/search.jpg" , icon : <CgSearch/> , text : "At the outset of our contract, utilizing the information you’ve provided, we will conduct thorough research to gain a deeper understanding of your business and brand identity."},
   {id : 2 , title : "Planning" , image : "/images/progress/plan.jpg" , icon : <IoIosCalendar/> , text : "Before we begin, in the first two or three days, a comprehensive roadmap of the project will be designed and sent to you. The project will proceed step by step, following the established plan."},
-  {id : 3 , title : "Develop" , image : "/images/progress/develop.jpg" , icon : <LuCode2/> , text : "During the project’s development, you will receive regular updates on its progress."},
+  {id : 3 , title : "Develop" , image : "/images/progress/develop.jpg" , icon : <PiCodeBold/> , text : "During the project’s development, you will receive regular updates on its progress."},
   {id : 4 , title : "Final" , image : "/images/progress/final.jpg" , icon : <BsStars/> , text : "Once the project is complete, if you have any new ideas or changes, we will review them in accordance with the terms of the contract."},
 ]
 

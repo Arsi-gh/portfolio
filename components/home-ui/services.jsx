@@ -17,8 +17,8 @@ export default function Services() {
         <ServiceWrapper display={toggleDisplay}/>
       </article>
       <div className='flex max-sm:flex-col rounded-lg overflow-hidden bg-white text-neutral-700 shadow-2xl shadow-neutral-500 dark:shadow-sm transition-all absolute -bottom-8 max-sm:-bottom-9 left-1/2 -translate-x-1/2'>
-        <button onClick={() => setToggleDisplay(false)} className={`p-4 text-lg z-10 max-sm:text-sm max-sm:p-2 ${!toggleDisplay && 'bg-neutral-700 text-white'}`}>Development</button>
-        <button onClick={() => setToggleDisplay(true)} className={`p-4 text-lg z-10 max-sm:text-sm max-sm:p-2 ${toggleDisplay && 'bg-neutral-700 text-white'}`}>Ui Ux design</button>
+        <button onClick={() => setToggleDisplay(false)} className={`p-4 text-lg z-10 max-sm:text-sm max-sm:p-2 ${!toggleDisplay ? 'bg-neutral-700 text-white' : ''}`}>Development</button>
+        <button onClick={() => setToggleDisplay(true)} className={`p-4 text-lg z-10 max-sm:text-sm max-sm:p-2 ${toggleDisplay ? 'bg-neutral-700 text-white' : ''}`}>Ui Ux design</button>
       </div>
     </section>
   )

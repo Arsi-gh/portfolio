@@ -25,7 +25,7 @@ export default function ProjectWrapper() {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        initialSlide={3}
+        initialSlide={2}
         breakpoints= {{
           100 : {
             slidesPerView : 3

@@ -23,28 +23,6 @@ export const projectsData = [
 
     {
         id : 2, 
-        title : 'Simon pavilion site & menu redesign',
-        desc : "One of my favorite digital menus that I recently worked on is the project I mentioned earlier. It underwent a complete redesign. However, the latest app they were using had a poor user interface design, user experience, low site speed, weak core web vitals, and lacked essential features. Regrettably, the project was canceled by the client, and it never made it to their main server.",
-        types : ["menu"],
-        images : [
-            '/images/projects/simon/1.jpg',
-            '/images/projects/simon/2.jpg',
-            '/images/projects/simon/3.jpg',
-            '/images/projects/simon/4.jpg',
-            '/images/projects/simon/5.jpg',
-            '/images/projects/simon/6.jpg',
-            '/images/projects/simon/7.jpg',
-        ],
-        client : 'Simon pavilion',
-        clientDesc : 'Cafe , grill station and restaurant',
-        clientImg : '/images/projects/simon/client.png',
-        techs : [0 , 1 , 5 , 11],
-        createdAt : '',
-        link : 'https://menusimon.netlify.app/',
-    },
-
-    {
-        id : 3, 
         title : 'Real estate + CMS web application',
         desc : "Real estate web application design, offering a comprehensive set of features and easy access for customers to find properties. The project encompasses three distinct authentication roles: Admin, Agent, and User. The Admin can manage various aspects of the application, including deleting, editing, and removing uploaded estates, suspending users, controlling agents, responding to and receiving requests and messages from agents and users. Estate pages are built using SSG, while the dashboard is based on SSR. Users can create accounts and add their preferred estates to their favorites list.",
         types : ["web" , "cms"],
@@ -63,7 +41,7 @@ export const projectsData = [
     },
 
     {
-        id : 4, 
+        id : 3, 
         title : 'Plant store e-commerce web application',
         desc : "I’ve initiated this project by designing its user interface. I’ve utilized React and Tailwind CSS to develop a fast and well-practiced e-commerce web application. The project encompasses two distinct authentication roles: Admin and User. The Admin has access to various options, including user and product lists, a comprehensive daily, monthly, and yearly report, an events panel, tickets, off codes, and transactions control. The basket page offers three different levels of complexity, accompanied by a user step guide to enhance the user experience. The project is fully responsive and can be displayed on both mobile and desktop devices.",
         types : ["commerce" , "cms"],
@@ -80,51 +58,8 @@ export const projectsData = [
         createdAt : '',
         link : 'https://github.com/Arsi-gh/react-shopping-project',
     },
-
     {
-        id : 5, 
-        title : 'Shanderman menu development',
-        desc : "Shanderman Digital Menu: Creating responsive and customizable digital menus, we ensure easy and fast access for consumers. Powered by the amazing features of Next.js, our project adheres to the best standards, practices, and accessibility guidelines.",
-        types : ["menu"],
-        images : [
-            '/images/projects/shanderman/1.jpg',
-            '/images/projects/shanderman/2.jpg',
-            '/images/projects/shanderman/3.jpg',
-            '/images/projects/shanderman/4.jpg',
-            '/images/projects/shanderman/5.jpg',
-        ],
-        client : 'Shanderman',
-        clientDesc : 'Cafe and fastfood restaurant',
-        clientImg : '',
-        techs : [0 , 1 , 5],
-        createdAt : '',
-        link : 'https://shanderman.com/',
-    },
-
-    {
-        id : 6, 
-        title : 'Meydoon cafe , digital menu redesigh and development',
-        desc : "Meydoon Digital Menu: Creating Responsive and Custom Digital Menus We specialize in designing responsive and customizable digital menus that provide easy and fast access for consumers. Our project is a SPA website powered by the incredible features of Next.js and styled with Tailwind CSS to ensure it adheres to the best standards, practices, and accessibility guidelines.",
-        types : ["menu"],
-        images : [
-            '/images/projects/meydoon/2.JPG',
-            '/images/projects/meydoon/3.JPG',
-            '/images/projects/meydoon/4.JPG',
-            '/images/projects/meydoon/1.JPG',
-            '/images/projects/meydoon/5.JPG',
-            '/images/projects/meydoon/6.JPG',
-            '/images/projects/meydoon/7.JPG',
-        ],
-        client : 'Meydoon cafe',
-        clientDesc : 'Cafe and restaurant',
-        clientImg : '',
-        techs : [0 , 1 , 5],
-        createdAt : '',
-        link : 'https://meydoon.netlify.app/',
-    },
-
-    {
-        id : 7, 
+        id : 4, 
         title : 'Hojreh cafe , digital menu plus shopping cart',
         desc : "Hojreh, a takeaway cafe nestled on Taleghani Street, was designed with its visual identity in mind. The cafe employs cutting-edge technologies to ensure easy access for customers, streamlining the ordering process.",
         types : ["menu"],
@@ -145,7 +80,7 @@ export const projectsData = [
     },
 
     {
-        id : 8, 
+        id : 5, 
         title : 'Maadi cafe , digital menu design',
         desc : "Maadi is a café and restaurant located in the well-known area of Charbaq, Maadi Niasarm. The project began with a unique design inspired by their brand identity and was later developed using the Next.js framework and styled with Tailwind CSS.",
         types : ["menu"],

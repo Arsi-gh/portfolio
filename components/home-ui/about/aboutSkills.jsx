@@ -12,10 +12,9 @@ export default function AboutSkills() {
 
     return (
         <div className='w-[32rem] h-56 rounded-xl rounded-tl-none max-sm:rounded-t-none  bg-primary-50 relative shadow-xl px-5 py-7 flex items-start place-content-start gap-x-3 flex-wrap max-md:mt-24 max-md:w-full max-md:h-fit'>
-          <span className='rounded-t-xl p-3 absolute font-semibold -top-16  -left-[1px] bg-primary-50 *:rounded-lg *:p-2 *:px-4 max-sm:w-full *:max-sm:w-1/3'>
-            <button onClick={() => setSectionIndex(0)} className={sectionIndex == 0 && 'text-secondary-900 bg-primary-700 shadow-md'}>Frontend</button>
-            <button onClick={() => setSectionIndex(1)} className={sectionIndex == 1 && 'text-secondary-900 bg-primary-700 shadow-md'}>Backend</button>
-            {/* <button onClick={() => setSectionIndex(2)} className={sectionIndex == 2 && 'text-secondary-900 bg-primary-700 shadow-md'}>Ui Ux</button> */}
+          <span className='rounded-t-xl p-3 absolute font-semibold -top-16 left-0 bg-primary-50 *:rounded-lg *:p-2 *:px-4 max-sm:w-full *:max-sm:w-1/3'>
+            <button onClick={() => setSectionIndex(0)} className={sectionIndex == 0 ? 'text-secondary-900 bg-primary-700 shadow-md' : ''}>Frontend</button>
+            <button onClick={() => setSectionIndex(1)} className={sectionIndex == 1 ? 'text-secondary-900 bg-primary-700 shadow-md' : ''}>Backend</button>
           </span>
           {sections[sectionIndex]}
         </div>

@@ -35,7 +35,7 @@ const FilterWrapper = ({name , children}) => {
 
     return (
         <div className="w-full transition-all border-t border-secondary-700">
-          <button onClick={() => setIsOpen(!isOpen)} className="font-semibold p-3 w-full flex justify-between items-center">{name}<GoChevronDown className={`text-2xl transition-all ${isOpen && 'rotate-180' }`}/></button>
+          <button onClick={() => setIsOpen(!isOpen)} className="font-semibold p-3 w-full flex justify-between items-center">{name}<GoChevronDown className={`text-2xl transition-all ${isOpen ? 'rotate-180' : 'rotate-0' }`}/></button>
           <ul className={`border-l ml-3 my-2 transition-all duration-300 overflow-auto ${isOpen ? 'max-h-48' : '-mb-2 max-h-0 overflow-hidden' }`}>
             {children}
           </ul>
@@ -128,8 +128,8 @@ export const ProjectSort = () => {
 
   return (
     <FilterWrapper name="Sort">
-      <li onClick={() => paramHandler(false)} className={`filter-li ${!isDescending && 'bg-neutral-700 text-white'}`}>Ascending<PiSortAscending className="text-xl"/></li>
-      <li onClick={() => paramHandler(true)} className={`filter-li ${isDescending && 'bg-neutral-700 text-white'}`}>Descending<PiSortDescending className="text-xl"/></li>
+      <li onClick={() => paramHandler(false)} className={`filter-li ${!isDescending ? 'bg-neutral-700 text-white' : ''}`}>Ascending<PiSortAscending className="text-xl"/></li>
+      <li onClick={() => paramHandler(true)} className={`filter-li ${isDescending ? 'bg-neutral-700 text-white' : ''}`}>Descending<PiSortDescending className="text-xl"/></li>
     </FilterWrapper>
   )
 }

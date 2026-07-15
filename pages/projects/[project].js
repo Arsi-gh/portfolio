@@ -92,7 +92,6 @@ export async function getStaticPaths () {
         {params  : {Project : "3"}},
         {params  : {Project : "4"}},
         {params  : {Project : "5"}},
-        {params  : {Project : "6"}},
       ],
       fallback : true,
     }
